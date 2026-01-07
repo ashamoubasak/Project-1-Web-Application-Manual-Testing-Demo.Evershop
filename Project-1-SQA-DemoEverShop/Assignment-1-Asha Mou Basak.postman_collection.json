@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "f09377e8-399d-4151-af04-fcc6121b2c96",
+		"name": "Assignment-1-Asha Mou Basak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46814075",
+		"_collection_link": "https://ashamoubasak.postman.co/workspace/Asha-Mou-Basak's-Workspace~62966ccb-c374-46fe-8187-5f7bf3fdaf26/collection/46814075-f09377e8-399d-4151-af04-fcc6121b2c96?action=share&source=collection_link&creator=46814075"
+	},
+	"item": [
+		{
+			"name": "Search For the Product Nike React",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basaURL}}/search?keyword=nike+react",
+					"host": [
+						"{{basaURL}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "nike+react"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecting Nike React Infinity Run Flynkit Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basaURL}}/nike-react-infinity-run-flyknit-171",
+					"host": [
+						"{{basaURL}}"
+					],
+					"path": [
+						"nike-react-infinity-run-flyknit-171"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Selecting Green Color Medium Size Nike React Infinity Run Flynkit Shoe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basaURL}}/nike-react-infinity-run-flyknit-171?size=5&ajax=true&color=17",
+					"host": [
+						"{{basaURL}}"
+					],
+					"path": [
+						"nike-react-infinity-run-flyknit-171"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "ajax",
+							"value": "true"
+						},
+						{
+							"key": "color",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adding The Product to Cart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"NJC44141-Green-M\", \r\n    \"qty\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{basaURL}}/api/cart/mine/items",
+					"host": [
+						"{{basaURL}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"mine",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Cart After Adding the Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basaURL}}/cart",
+					"host": [
+						"{{basaURL}}"
+					],
+					"path": [
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Increasing One Item on the Cart",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qty\": 1, \r\n    \"action\": \"increase\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{basaURL}}/api/cart/3cccc8c2-a64a-43c6-b703-e200f5167ea9/items/85640a0c-faba-46ae-9929-7543a1e1ade6",
+					"host": [
+						"{{basaURL}}"
+					],
+					"path": [
+						"api",
+						"cart",
+						"3cccc8c2-a64a-43c6-b703-e200f5167ea9",
+						"items",
+						"85640a0c-faba-46ae-9929-7543a1e1ade6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "basaURL",
+			"value": "https://demo.evershop.io",
+			"type": "default"
+		}
+	]
+}
