@@ -66,7 +66,17 @@ The full functionality of the project is manually tested using Postman.
 
 ---
 
-## Test Cases
+## Test Execution Summary
+- **Total Test Cases:** 13  
+- **Passed:** 8  
+- **Failed:** 3  
+- **Blocked / Not Executed:** 2
+
+---
+
+## Conclusion
+The project helped in understanding manual testing processes, writing test cases, executing them, and reporting defects. Minor bugs were identified, improving the overall application quality.
+
 
 
 
